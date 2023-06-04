@@ -1,16 +1,22 @@
 ﻿@model Transportes.Models.Envio
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar";
 }
 
-<h1>Delete</h1>
+<h1>Eliminar</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Esta seguro de eliminar el envio @ViewData["TipoEnvio"]?</h3>
 <div>
     <h4>Envio</h4>
     <hr />
     <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NumeroGuia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumeroGuia)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.FechaRegistro)
         </dt>
@@ -29,6 +35,18 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Precio)
         </dd>
+        <dt class="col-sm-2">
+            Descuento
+        </dt>
+        <dd class="col-sm-10">
+            @Model.GetDescuento() %
+        </dd>
+        <dt class="col-sm-2">
+            Precio Con Descuento
+        </dt>
+        <dd class="col-sm-10">
+            @Model.GetPrecioDescuento()
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CantidadProducto)
         </dt>
@@ -36,25 +54,43 @@
             @Html.DisplayFor(model => model.CantidadProducto)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CedulaClienteNavigation)
+            @Html.DisplayNameFor(model => model.CedulaCliente)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CedulaClienteNavigation.Cedula)
+            @Html.DisplayFor(model => model.CedulaCliente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaClienteNavigation.Nombres)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CedulaClienteNavigation.Nombres)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaClienteNavigation.Apellidos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CedulaClienteNavigation.Apellidos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaClienteNavigation.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CedulaClienteNavigation.Telefono)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DestinoNavigation)
+            @Html.DisplayNameFor(model => model.DestinoNavigation.Nombre)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DestinoNavigation.IdDestino)
+            @Html.DisplayFor(model => model.DestinoNavigation.Nombre)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoProductoNavigation)
+            Descripcion Del Producto
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoProductoNavigation.IdTipoProducto)
+            @Html.DisplayFor(model => model.TipoProductoNavigation.Descripcion)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VehiculoNavigation)
+            Placa Del Vehiculo
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.VehiculoNavigation.Placa)
@@ -63,7 +99,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="NumeroGuia" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver</a>
     </form>
 </div>

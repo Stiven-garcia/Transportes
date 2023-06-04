@@ -15,6 +15,7 @@ public partial class TransportesContext : DbContext
     {
     }
 
+    public virtual DbSet<Login> Login { get; set; }
     public virtual DbSet<Cliente> Clientes { get; set; }
 
     public virtual DbSet<Destino> Destinos { get; set; }
@@ -29,10 +30,6 @@ public partial class TransportesContext : DbContext
 
     public virtual DbSet<Vehiculo> Vehiculos { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=LAPTOP-LF4N6N3I;Initial Catalog=Transportes;Integrated Security=True;Trusted_Connection=True;Encrypt=False;");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Cliente>(entity =>
@@ -46,6 +43,22 @@ public partial class TransportesContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
             entity.Property(e => e.Nombres)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+        });
+        modelBuilder.Entity<Login>(entity =>
+        {
+            entity.HasKey(e => e.IdUser);
+
+            entity.ToTable("Login");
+
+            entity.Property(e => e.Correo)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Contraseña)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Nombre)
                 .HasMaxLength(50)
                 .IsUnicode(false);
         });

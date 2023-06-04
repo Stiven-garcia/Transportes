@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,7 @@ namespace Transportes.Controllers
     /// <summary>
     /// Administra los destinos (puertos y bodegas) de los envios
     /// </summary>
+    [AllowAnonymous]
     public class DestinosController : Controller
     {
         private readonly TransportesContext _context;

@@ -1,17 +1,96 @@
 ﻿@model IEnumerable<Transportes.Models.Envio>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Envios";
 }
 
-<h1>Index</h1>
+<h1>Envios</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" asp-route-tipo="1">Crear Envio Terrestre</a>
 </p>
+<p>
+    <a asp-action="Create" asp-route-tipo="2">Crear Envio Maritimo</a>
+</p>
+
+<div class="row">
+    <div class="col-md-7">
+        <label class="control-label">Filtrar</label>
+        <form asp-action="Search">
+            <div class="form-group">
+                <label class="control-label col-md-3">Nombre de Destino</label>
+                <input name="numeroGuia" type="text" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Tipo de Envio</label>
+                <select name="TipoEnvio" class="form-control col-md-4" asp-items="ViewBag.TipoEnvio"></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Fecha de Registro Inicio</label>
+                <input name="FechaRegistroStart" type="date" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Fecha de Registro Final</label>
+                <input name="FechaRegistroEnd" type="date" class="form-control col-md-4" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3">Fecha de Entrega Inicio</label>
+                <input name="FechaEntregaStart" type="date" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Fecha de Entrega Final</label>
+                <input name="FechaEntregaEnd" type="date" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Precio Inicial</label>
+                <input name="PrecioStart" type="number" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Precio Final</label>
+                <input name="PrecioEnd" type="number" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Cedula</label>
+                <input name="Cedula" type="number" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Nombre y/o Apellido</label>
+                <input name="NombreApellido" type="text" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Tipo de Producto</label>
+                <input name="TipoProducto" type="text" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Placa</label>
+                <input name="Placa" type="text" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Tipo de Vehiculo</label>
+                <select name="TipoVehiculo" class="form-control col-md-4" asp-items="ViewBag.TipoVehiculo"></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Destino</label>
+                <input name="Destino" type="text" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Tipo de Destino</label>
+                <select name="TipoDestino" class="form-control col-md-4" asp-items="ViewBag.TipoDestino"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Buscar" class="btn btn-primary" />
+            </div>
+        </form>
+        <a asp-action="Index" type="button" class="btn btn-danger">Limpiar Filtros</a>
+    </div>
+</div>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroGuia)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.FechaRegistro)
             </th>
@@ -19,22 +98,13 @@
                 @Html.DisplayNameFor(model => model.FechaEntrega)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Precio)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.CantidadProducto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CedulaClienteNavigation)
+                Tipo de Producto
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DestinoNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoProductoNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.VehiculoNavigation)
+               Destino
             </th>
             <th></th>
         </tr>
@@ -43,33 +113,30 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.NumeroGuia)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.FechaRegistro)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FechaEntrega)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Precio)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.CantidadProducto)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CedulaClienteNavigation.Cedula)
+                @Html.DisplayFor(modelItem => item.TipoProductoNavigation.Descripcion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DestinoNavigation.IdDestino)
+                @Html.DisplayFor(modelItem => item.DestinoNavigation.Nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoProductoNavigation.IdTipoProducto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VehiculoNavigation.Placa)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.NumeroGuia">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.NumeroGuia">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.NumeroGuia">Delete</a>
+                    @{
+                        var tipo = item.VehiculoNavigation.TipoVehiculo == 2 ? 1 : 2;
+                    }
+                    <a asp-action="Edit" asp-route-id="@item.NumeroGuia" asp-route-tipo="@tipo">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.NumeroGuia" asp-route-tipo="@tipo">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.NumeroGuia" asp-route-tipo="@tipo">Eliminar</a>
             </td>
         </tr>
 }

@@ -287,3 +287,4 @@ C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\s
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\obj\Debug\net6.0\Transportes.pdb
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\obj\Debug\net6.0\Transportes.genruntimeconfig.cache
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\obj\Debug\net6.0\ref\Transportes.dll
+C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

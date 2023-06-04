@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ namespace Transportes.Controllers
     /// <summary>
     /// Administra los vehiculos del sistema
     /// </summary>
+    [AllowAnonymous]
     public class VehiculosController : Controller
     {
         private readonly TransportesContext _context;
@@ -76,6 +78,10 @@ namespace Transportes.Controllers
             bool isValid = false;
             if (!string.IsNullOrEmpty(vehiculo.Placa) && vehiculo.TipoVehiculo != null)
             {
+                if (VehiculoExists(vehiculo.Placa))
+                {
+                    return UnprocessableEntity("El vehiculo ya existe");
+                }
                 string placa = @"^[A-Za-z]{3}\d{3}$";
                 string flota = @"^[A-Za-z]{3}\d{4}[A-Za-z]$";
                
@@ -144,5 +150,16 @@ namespace Transportes.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        /// <summary>
+        /// valida la existencia del vehiculo
+        /// </summary>
+        /// <param name="cedula"></param>
+        /// <returns></returns>
+        private bool VehiculoExists(string placa)
+        {
+            return (_context.Vehiculos?.Any(e => e.Placa.Equals(placa,StringComparison.InvariantCultureIgnoreCase))).GetValueOrDefault();
+        }
     }
+
 }

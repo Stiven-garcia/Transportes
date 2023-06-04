@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,7 @@ namespace Transportes.Controllers
     /// <summary>
     /// Administra los clientes del sistema
     /// </summary>
+    [AllowAnonymous]
     public class ClientesController : Controller
     {
         private readonly TransportesContext _context;
@@ -75,6 +77,10 @@ namespace Transportes.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (ClienteExists(cliente.Cedula))
+                {
+                    return UnprocessableEntity("El cliente ya existe");
+                }
                 _context.Add(cliente);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
