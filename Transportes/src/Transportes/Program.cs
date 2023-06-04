@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Transportes.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<TransportesContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TransportesContext"));
+});
 
 var app = builder.Build();
 

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Transportes.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h1>Clientes</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo</a>
+</p>
+
+<form asp-action="Search" method="get">
+    <div class="form-group">
+        <input type="text" class="form-control" name="filter" />
+        <input type="submit" value="Buscar" class="btn btn-primary" /> 
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-cedula="@item.Cedula">Editar</a> |
+                <a asp-action="Delete" asp-route-cedula="@item.Cedula">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -16,12 +16,60 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Destinos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Destinos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Destinos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Destinos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Envios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW52aW9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Envios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW52aW9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Envios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW52aW9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Envios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW52aW9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Envios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW52aW9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Shared/Error.cshtml]
@@ -30,6 +78,34 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/TipoProductos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1Byb2R1Y3Rvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/TipoProductos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1Byb2R1Y3Rvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/TipoProductos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1Byb2R1Y3Rvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/TipoProductos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1Byb2R1Y3Rvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Vehiculos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Vehiculos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/Vehiculos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Stiven/Documents/Programacion/Programacion C\#/Transportes/Transportes/src/Transportes/Views/_ViewImports.cshtml]

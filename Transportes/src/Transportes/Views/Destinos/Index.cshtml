@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Transportes.Models.Destino>
+
+@{
+    ViewData["Title"] = "Destinos";
+}
+
+<h1>Destinos</h1>
+
+<p>
+    <a asp-action="Create">Crear Destino</a>
+</p>
+<div class="row">
+    <div class="col-md-7">
+        <label class="control-label">Filtrar</label>
+        <form asp-action="Search" method="get">
+            <div class="form-group">
+                <label class="control-label col-md-3">Tipo Destino</label>
+                <select name="tipoDestino" class="form-control col-md-4" asp-items="ViewBag.TipoDestino"></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Nombre de Destino</label>
+                <input name="nombreDestino" type="text" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Ubicacion de Destino</label>
+                <input name="ubicacionDestino" type="text" class="form-control col-md-4" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Buscar" class="btn btn-primary" />
+            </div>
+        </form>
+        <a asp-action="Index" type="button" class="btn btn-danger">Limpiar Filtros</a>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ubicacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDestino)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ubicacion)
+            </td>
+            <td>
+                    @item.TipoDestinoNavigation.Tipo
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdDestino">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdDestino">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
