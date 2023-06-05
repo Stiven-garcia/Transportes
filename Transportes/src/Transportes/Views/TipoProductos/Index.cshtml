@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Transportes.Models.TipoProducto>
+
+@{
+    ViewData["Title"] = "Tipo de Productos";
+}
+
+<h1>Tipo de productos</h1>
+
+<p>
+    <a asp-action="Create">Crear Tipo de Producto</a>
+</p>
+<form asp-action="Search" method="get">
+    <div class="form-group">
+        <label class="control-label">Filtrar por descripcion</label>
+        <input type="text" class="form-control" name="descripcion" />
+        <input type="submit" value="Buscar" class="btn btn-primary" />
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdTipoProducto">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdTipoProducto">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,105 @@
+﻿@model Transportes.Models.Envio
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Esta seguro de eliminar el envio @ViewData["TipoEnvio"]?</h3>
+<div>
+    <h4>Envio</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NumeroGuia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumeroGuia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaEntrega)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaEntrega)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt class="col-sm-2">
+            Descuento
+        </dt>
+        <dd class="col-sm-10">
+            @Model.GetDescuento() %
+        </dd>
+        <dt class="col-sm-2">
+            Precio Con Descuento
+        </dt>
+        <dd class="col-sm-10">
+            @Model.GetPrecioDescuento()
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CantidadProducto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CantidadProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaCliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CedulaCliente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaClienteNavigation.Nombres)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CedulaClienteNavigation.Nombres)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaClienteNavigation.Apellidos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CedulaClienteNavigation.Apellidos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaClienteNavigation.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CedulaClienteNavigation.Telefono)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DestinoNavigation.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DestinoNavigation.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            Descripcion Del Producto
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoProductoNavigation.Descripcion)
+        </dd>
+        <dt class = "col-sm-2">
+            Placa Del Vehiculo
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VehiculoNavigation.Placa)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="NumeroGuia" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver</a>
+    </form>
+</div>
