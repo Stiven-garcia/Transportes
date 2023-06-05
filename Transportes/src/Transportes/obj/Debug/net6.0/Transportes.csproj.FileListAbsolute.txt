@@ -11,6 +11,7 @@ C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\s
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\bin\Debug\net6.0\MessagePack.dll
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\bin\Debug\net6.0\MessagePack.Annotations.dll
+C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\bin\Debug\net6.0\Microsoft.Build.dll
@@ -287,4 +288,3 @@ C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\s
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\obj\Debug\net6.0\Transportes.pdb
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\obj\Debug\net6.0\Transportes.genruntimeconfig.cache
 C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\obj\Debug\net6.0\ref\Transportes.dll
-C:\Users\Stiven\Documents\Programacion\Programacion C#\Transportes\Transportes\src\Transportes\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
